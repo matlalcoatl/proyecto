@@ -1,0 +1,506 @@
+@charset "utf-8";
+/* CSS Document */
+
+.principal{	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	
+}
+.ea7 .leccion{
+	width:auto;
+	background-color:#E6E6FA;
+	
+	
+}
+.ea7 .leccion > h2{
+	font-size:20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-align:center;
+}
+
+.principal h3{
+	font-size:18px;
+	
+	border-bottom:2px solid;
+	line-height:32px;
+	padding: 2px 0 0 50px;
+	
+	position:relative;
+}
+
+.principal h3:before{
+	width:32px;
+	height:32px;
+	background-size:32px 32px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	content:"";
+	
+	position:absolute;
+	left:0;
+	top:-2px;
+	
+	margin-right:10px;
+	
+	padding:2px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.principal .introduccion > h3{border-color:#db3e3e;color:#db3e3e;}
+.principal .introduccion > h3:before{background-image:url(img/introduccion.png);background-color:#fff;}
+
+.principal .contenido_leccion > h3{border-color:#db3e3e;color:#db3e3e;}
+.principal .contenido_leccion > h3:before{background-image:url(img/contenido.png);background-color:#fff;}
+
+.principal .ejercicio > h3{border-color:#db3e3e;color:#db3e3e;}
+.principal .ejercicio > h3:before{background-image:url(img/ejercicio.png);background-color:#db3e3e;}
+
+.principal .referencias > h3{border-color:#db3e3e;color:#db3e3e;}
+.principal .referencias > h3:before{background-image:url(img/referencias.png);background-color:#db3e3e;}
+
+.principal > div{
+	padding:20px;
+	border:2px #3D5573 solid;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(163,161,163,1);
+-moz-box-shadow: 5px 5px 5px 0px rgba(163,161,163,1);
+box-shadow: 5px 5px 5px 0px rgba(163,161,163,1);
+border-radius:4px;
+margin:10px 10px 10px 10px;
+background-image:url(img/fondo.png);
+/*display:none;*/
+}
+
+/*.principal > div > div{
+	margin-bottom:40px;
+}*/
+
+.principal > div > div > *:first-child{margin-top:0;}
+.principal > div > div > *:last-child{margin-bottom:0;}
+
+.principal .importante,
+.principal .formatos{
+	width: auto;
+	margin-top:2em;
+	margin-left:50px;
+	margin-right:20px;
+	margin-bottom:2em;
+	padding: 10px 10px 10px 78px;
+	border-width:2px;
+	border-left-style:solid;
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-right-style:solid;
+	border-radius:4px;
+	min-height:58px; 	
+	background-position:10px 10px;
+	background-repeat:no-repeat;
+	background-size:58px 58px;
+ 	-ms-word-break: normal;
+    word-break:normal;
+	word-wrap:break-word;
+}
+
+.principal .importante
+{
+	width:50%;
+	margin-left:auto;
+	padding: 10px 10px 10px 78px;
+	background-size:58px 58px;
+	/*border-left-style:solid;
+	border-right-style:solid;
+	border-top-style:solid;
+	border-bottom-style:solid;*/
+}
+.principal .importante:before,
+.principal .formatos:before{
+	display:block;
+	font-size:1.2em;
+	margin-bottom:1em;
+}
+.principal .importante:after,
+.principal .formatos:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.principal .importante > *:last-child,
+.principal .formatos > *:last-child{
+	margin-bottom:0;
+}
+
+/* [ENI] Importante */
+	.principal .importante{background-image:url(img/importante.png);border-color:#9a3e3e;}
+	.principal .importante:before{content:"Importante";color:#9a3e3e;}
+	
+/* [DCF] Formato */
+	.principal .formatos{background-image:url(img/formatos.png);border-color:#c17290;}
+	.principal .formatos:before{color:#c17290;}
+	.principal .formatos:before{content:"Formatos";}	
+	
+	
+.principal ul,
+.principal ol{
+	list-style-type:none;
+	counter-reset:elemento;
+	margin:1em 0 1em 0;
+	padding:0 0 0 30px;
+}
+
+.principal ul li,
+.principal ol li{
+	counter-increment:elemento;
+	position:relative;
+	
+	margin-bottom:1em;
+}
+
+.principal ul,
+.principal ol{
+	list-style-type:none;
+	counter-reset:puntobullet0;
+	margin:1em 0 1em 0;
+	padding:0 0 0 20px;
+}
+.principal ul{padding:0 0 0 20px;}
+.principal ol{padding:0 0 0 30px;}
+.principal ul > li,
+.principal ol > li{
+	counter-increment:puntobullet0;
+	position:relative;
+	margin:0 0 1em 0;
+	padding:0 0 0 0;
+}
+.principal ul > li:before,
+.principal ol > li:before{
+	color:#FCC33B;
+	position:absolute;
+	top:-1px;
+	left:-12px;
+	font-weight:bold;
+	font-size:1.1em;
+}
+.principal ul > li:before{content:counter(puntobullet0, disc);}
+.principal ol > li:before{content:counter(puntobullet0, decimal) ".";left:-20px;}
+
+.principal a{
+	text-decoration:underline;
+}
+
+.principal .bloque_figura .imagen{
+	width:50%;
+	text-align:center;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.principal .bloque_figura .imagen img{
+	width:80%;
+	height:auto;
+	max-width:250px;
+}
+
+.principal .bloque_figura .texto_bloque{
+	width:50%;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.principal button{
+	display: inline-block;
+    margin:5px;
+	border-radius:3px;
+	border-style:solid;
+	padding:4px 10px 4px 10px;
+	color:white;
+	background-color:#2563AB;
+	border-color:#215795;
+	cursor:pointer;
+}
+
+/*.intro button{
+	display: inline-block;
+    margin:5px;
+	border-radius:3px;
+	border-style:solid;
+	padding:4px 10px 4px 10px;
+	color:white;
+	background-color:#057c05;
+	border-color:#046904;
+	cursor:pointer;
+}
+.intro .navegacion{
+	width:50% !important;
+	margin-left:auto !important;
+	
+}*/
+
+.principal .navegacion{
+	width:25%;
+	margin-left:auto;	
+}
+.resultados{
+	width:80%;	
+	text-align:center;
+	font-size:15px;	
+	margin-left:auto;
+	margin-right:auto;
+}
+.resultados:after{
+	clear:both;
+	content:"";
+	display:block;
+	padding:10px 10px 10px 10px;
+}
+	
+.resultados tr:nth-child(1) td:nth-child(1) {
+    margin:5px;
+	color:white;
+	background-color:#2563AB;	
+}
+.resultados tr:nth-child(1) td:nth-child(2) {
+    margin:5px;
+	color:white;
+	background-color:#2563AB;	
+}
+.resultados tr:nth-child(1) td:nth-child(3) {
+    margin:5px;
+	color:white;
+	background-color:#2563AB;
+}
+.resultados tr:nth-child(2) td:nth-child(1) {
+    
+	border-bottom:solid;
+	border-right:solid;
+	border-left:solid;
+	border-color:#215795;	
+}
+.resultados tr:nth-child(2) td:nth-child(2) {
+    margin:5px;
+	border-bottom:solid;
+	border-right:solid;
+	border-left:solid;
+	border-color:#215795;	
+}
+.resultados tr:nth-child(2) td:nth-child(3) {
+    margin:5px;
+	border-bottom:solid;
+	border-right:solid;
+	border-left:solid;
+	border-color:#215795;	
+}
+
+.ejercicio1 > select{
+	display:none;
+}
+
+.ejercicio1 .director{
+	width:10%;
+	border:3px #003366 solid;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:bold;
+	
+}
+
+.ejercicio1 img {
+	display:block;
+	margin:1em 0 1em 0;
+	width:100%;
+}
+
+.ejercicio1 .subordinados{
+	display:table;
+	border-spacing:10px;	
+	width:100%;
+	max-width:600px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+.ejercicio1 .subordinados > div{
+	display:table-row;
+}
+
+.ejercicio1 .subordinados > div > div{
+	display:table-cell;
+	width:20%;
+	border:3px #003366 solid;
+	text-align:center;
+	padding:5px;
+}
+
+.ejercicio1 select{
+	width:90%;
+}
+
+.ejercicio1 .subordinados > div > div p{
+	font-weight:bold;
+}
+/*clases ejercicio 2*/
+.parte2 > select{
+	display:none;
+}
+.parte2 select{
+	width:80%;
+}
+
+
+.ejercicio2{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse:collapse;
+	
+}
+.ejercicio2 td{
+	padding:3px !important;
+	border:1px solid black !important;
+	
+}
+.ejercicio2 thead td{
+	font-weight:bold;
+	text-align:center;
+	color:white;
+}
+.ejercicio2 thead td:nth-child(6){
+	width:180px;
+}
+.ejercicio2 .separador td{
+	padding:10px 4px 10px 4px;
+	text-align:center;
+	font-weight:bold;
+	border:1px solid black !important;
+}
+.ejercicio2 .separador td:nth-child(n+2){
+	color:white;
+}
+
+.ejercicio2 thead .profundidad{
+	background-color:#F93;
+	border:1px solid black;
+}
+.ejercicio2  .profundidad{
+	border:1px solid #F93;
+}
+
+.ejercicio2 .separador td:nth-child(2), 
+.ejercicio2 .separador td:nth-child(3), 
+.ejercicio2 .separador td:nth-child(4), 
+.ejercicio2 .separador td:nth-child(5), 
+.ejercicio2 .separador td:nth-child(6){
+	background-color:#F93;
+}
+
+.ejercicio2 thead .prioridad{
+	background-color:#0099CC;
+	border:1px solid black;
+}
+.ejercicio2 .prioridad{border:1px solid #0099CC;}
+.ejercicio2 .separador td:nth-child(7), 
+.ejercicio2 .separador td:nth-child(8), 
+.ejercicio2 .separador td:nth-child(9){
+	background-color:#0099CC;
+}
+
+.ejercicio2 thead .requerido{
+	background-color:#999999;
+	border:1px solid black;
+}
+.ejercicio2 .requerido{border:1px solid #999999;
+text-align:center;}
+.ejercicio2 .separador td:nth-child(10){
+	background-color:#999999;
+}
+
+.ejercicio2 thead .valoracion{
+	background-color:#009933;
+	border:1px solid black;
+}
+.ejercicio2  .valoracion{border:1px solid #009933;}
+.ejercicio2 .separador td:nth-child(11), 
+.ejercicio2 .separador td:nth-child(12), 
+.ejercicio2 .separador td:nth-child(13){
+	background-color:#009933;
+}
+
+.ejercicio2 thead .alternativa{
+	background-color:#FF99CC;
+	border:1px solid black;
+}
+.ejercicio2 .alternativa{border:1px solid #FF99CC;}
+.ejercicio2 .separador td:nth-child(14){
+	background-color:#FF99CC;
+}
+
+#examheader{text-align:center; font-size:16px; font-weight:bold;}
+#examscore{text-align:center;font-size:16px;}
+.retro{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#intento{
+text-align:center;
+}
+	
+.excelente{
+display:none;
+font-size:18px;
+}
+.bueno{
+display:none;
+font-size:18px;
+}
+.regular{
+display:none;
+font-size:18px;
+}
+.fallo{
+display:none;
+font-size:18px;
+}
+
+.info1{
+	width:50%;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	border-collapse:collapse;
+	
+}
+.info1 td{
+	padding:3px !important;
+	border:1px solid black !important;
+	
+}
+
+.info1 td:nth-child(1){
+	width:250px;
+}
+.info1 td:nth-child(2){
+	width:150px;
+	border:none !important;
+}
+.info1 td:nth-child(3){
+text-align:center;
+}
+
+@media (max-width: 540px) {
+.principal .importante,
+.principal .formatos{
+		margin-left:0;
+		margin-right:0;
+		padding: 10px 10px 10px 48px;
+		background-size:30px 30px;
+}
+.principal .importante{
+		width:auto;
+	}
+}

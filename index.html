@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link id="lnkEstilos" rel="stylesheet" type="text/css" href="css/estilo.css" />
+<link id="lnkEstilos" rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+<link id="lnkBurbu" rel="stylesheet" type="text/css" href="css/burbuja.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.accordionjs.css" />
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/proyecto.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script src="js/jquery.accordionjs.js"></script>  
+
+<script>
+    var acjs = undefined;
+
+ 
+    $(document ).ready(function() {
+        try {
+          acjs = $('#accordion').accordionjs();
+        }
+        catch(error) {
+          console.log("Error:" + error);
+          alert("Error: "+ error);
+        }
+  }); // End $(document).ready(); 
+  </script>
+</head>
+
+<body>
+<div class="proyecto">
+<div class="leccion"><h2>Sistemas numéricos y hardware</h2></div>
+
+<div class="principal">
+
+<div class="intro">
+
+<div class="introduccion">
+<h3>Introducción</h3>
+
+<div class="bloque_figura">
+<div class="imagen" style="width:35%;"><img src="css/img/3.png" style="max-width:250px;"/></div><div class="texto_bloque">
+<p class="triangle-right left">¡Bienvenidos al Curso <strong>Sistemas numéricos y hardware!</strong></p>
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+<!--<div class="retro"></div>-->
+<div class="navegacion"><button class="btnStart">Siguiente</button></div>
+
+</div>
+
+<div class="contenido">
+
+<div class="introduccion">
+<h3>Introducción</h3>
+
+<div class="bloque_figura">
+<div class="texto_bloque">
+<p class="triangle-right right">En este Curso conocerás la forma en la que se representan y realizan operaciones con datos computaciones, conociendo el sistema binario, ocal y hexadecimal.</p>
+</div><div class="imagen"><img src="css/img/2.png" style="max-width:250px;"/></div>
+</div>
+
+</div>
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="siguiente">Siguiente</button></div>
+</div>
+
+<div class="contenido">
+<div class="contenido_leccion">
+<h3>Contenido</h3>
+<p>La representación de datos dentro de la computadora se realiza mediante patrones de bits, sin embargo existen otras notaciones que son utilizadas para facilitar la manipulación de grandes secuencias de bits, estos son los llamados <strong>sistemas numéricos decimal, hexadecimal y octal</strong>. En esta sección conocerás dichos sistemas y la forma de convertir las grandes secuencias de bits a éstos</p>
+ 
+<div class="bloque_figura">
+<div class="texto_bloque">
+<h2>Sistema binario</h2>
+<P>El <b>Sistema Binario</b> está conformado solamente por dos dígitos: <b>0 y 1 (bits)</b>, los cuales representan impulsos eléctricos dentro de la computadora que le indican "apagado" o "encendido", "falso" o "verdadero". Una computadora sólo puede entender este lenguaje y por eso se le conoce como lenguaje máquina</p>
+
+</div><div class="imagen"><img src="css/img/binario.jpg" style="max-width:200px;"/><p class="pie_foto">Figura 1. Números binarios Dataset bajo ángulo (Matejmo & iStock, 2017).</p> </div>
+</div>
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="siguiente">Siguiente</button></div>
+</div>
+
+</div>
+
+<div class="contenido">
+<div class="contenido_leccion">
+<h3>Contenido</h3>
+
+ 
+<div class="bloque_figura">
+<div class="imagen"><img src="css/img/4.png" style="max-width:300px;"/></div><div class="texto_bloque">
+<p class="triangle-right left">Haz clic en cada una de las secciones del recurso para que conozcas las características generales del sistema binario.</p>
+
+</div>
+</div>
+
+</div>
+
+
+<div id="container">  
+    <ul id="accordion">
+      <li data-required="true"  data-status="optional" data-selected="true" data-title="Características del sistema binario">
+      <p><strong>Características</strong>:</p>
+
+<p><span class="bullet">&bull;</span>Su base es el número <strong>2</strong>.</p>
+<p><span class="bullet">&bull;</span>Se compone de 2 elementos que son: <strong>0 y 1</strong>.</p>
+<p><span class="bullet">&bull;</span>Un número binario tiene dos elementos importantes, <strong>posición y exponente</strong>. Los cuales son explicados con el siguiente ejemplo:</p>
+
+<p align="center">Se tiene el número binario <strong>01001110</strong>.</p>
+
+<p><span class="bullet">&bull;</span>Posición: lugar que ocupan de derecha a izquierda comenzando por 0.</p>
+<p><span class="bullet">&bull;</span>Exponente de base 2: es la posición de cada dígito binario.</p>
+
+
+
+<table class="binario">
+<tr><th></th><th>0</th><th>1</th><th>0</th><th>0</th><th>1</th><th>1</th><th>1</th><th>0</th></tr>
+<tr><td>Posición:</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+<tr><td>Exponente base 2:</td><td>2<sup>7</sup></td><td>2<sup>6</sup></td><td>2<sup>5</sup></td><td>2<sup>4</sup></td><td>2<sup>3</sup></td><td>2<sup>2</sup></td><td>2<sup>1</sup></td><td>2<sup>0</sup></td></tr>
+</table>
+      
+      </li>
+      <li data-required="true"  data-status="optional" data-title="Conversión de binario a decimal">
+      
+<p>Tomando en cuenta la información anterior sobre las posiciones de cada bit, la conversión del sistema binario al decimal se realiza como sigue:</p>
+
+<p>Convertir <strong>0101101</strong> a decimal</p>
+
+<p><span class="bullet">1.</span> Elevar la base 2 a un exponente que sea igual a la posición de cada dígito binario, pero sólo se eleva la potencia de aquellos bits iguales a 1. Los bits iguales a 0, no tomarlos en cuenta.</p>
+
+<table class="binario">
+<tr><th></th><th>0</th><th>1</th><th>0</th><th>1</th><th>1</th><th>0</th><th>1</th></tr>
+<tr><td>Posición:</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+<tr><td>Exponente base 2:</td><td>2<sup>6</sup></td><td>2<sup>5</sup></td><td>2<sup>4</sup></td><td>2<sup>3</sup></td><td>2<sup>2</sup></td><td>2<sup>1</sup></td><td>2<sup>0</sup></td></tr>
+<tr><td>Resultado</td><td>No<br>cuenta</td><td>32</td><td>No<br>cuenta</td><td>8</td><td>4</td><td>No<br>cuenta</td><td>1</td></tr>
+</table>
+      
+      </li>
+    </ul>
+</div>
+
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="siguiente">Siguiente</button></div>
+</div>
+
+<div class="contenido">
+<div class="ejercicio">
+<h3>Ejercicio</h3>
+<p>Pon a prueba tus conocimientos sobre las <strong>características físicas de la tableta digital</strong>.</p>
+<p>Presiona el botón <strong>Iniciar</strong> y haz lo que se te pide.</p>
+
+ 
+<div class="bloque_figura">
+<div class="imagen"><img src="css/img/1.png" style="max-width:200px;"/></div><div class="texto_bloque">
+<p class="triangle-right left">Pon a prueba tus conocimientos.<br>
+Presiona el botón <strong>Iniciar</strong> y has lo que se te pide.</p>
+<div class="importante">
+<p>Puedes efectuar el ejercicio las veces que consideres necesarias, ya que te servirá como práctica para la Evidencia de Aprendizaje.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="siguiente">Iniciar</button></div>
+
+</div>
+
+<div class="contenido">
+<div class="ejercicio">
+<h3>Ejercicio</h3>
+<p>Selecciona la respuesta y presiona el botón <strong>Enviar</strong>.</p>
+
+<div class="ejercicio1">
+<p><span class="bulletN">1.-</span> La conversión <strong>del número binario</strong> 01100011 a decimal da como resultado:</p>
+<br>
+<p>a) <input type='radio' value='0' name='pregunta1'><label>89</label></p>
+<p>b) <input type='radio' value='0' name='pregunta1'><label>3</label></p>
+<p>c) <input type='radio' value='1' name='pregunta1'><label>99</label></p>
+<p>d) <input type='radio' value='0' name='pregunta1'><label>92</label></p>
+ </div>
+
+</div>
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="btnEjercicio1">Enviar</button></div>
+</div>
+
+<div class="contenido">
+<div class="ejercicio">
+<h3>Ejercicio</h3>
+<p>Selecciona la respuesta y presiona el botón <strong>Enviar</strong>.</p>
+
+<div class="ejercicio2">
+<p><span class="bulletN">2.-</span> La conversión del número binario 11010000 a decimal da como resultado:</p>
+<br>
+<p>a) <input type='radio' value='0' name='pregunta2'><label>60</label></p>
+<p>b) <input type='radio' value='1' name='pregunta2'><label>208</label></p>
+<p>c) <input type='radio' value='0' name='pregunta2'><label>80</label></p>
+<p>d) <input type='radio' value='0' name='pregunta2'><label>70</label></p>
+ </div>
+
+</div>
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="btnEjercicio2">Enviar</button></div>
+</div>
+
+<div class="contenido">
+<div class="ejercicio">
+<h3>Ejercicio</h3>
+<p>Selecciona la respuesta y presiona el botón <strong>Enviar</strong>.</p>
+
+<div class="ejercicio3">
+<p><span class="bulletN">3.-</span> Completa el siguiente planteamiento, para lo cual deberás arrastrar el resultado correcto:</p>
+<br>
+<style type="text/css">
+	#caja-1{
+		width: 100px;
+		height: 25px;
+		padding: 0.5em;
+		float: left;
+		margin: 5px;
+		font-size: 16px;
+		border: dotted 1px #3577B8;
+	}
+	#contenedor{
+		-moz-border-radius:10px 10px 10px 10px;
+		-webkit-border-radius:10px 10px 10px 10px;
+		-ms-border-radius:10px 10px 10px 10px;
+		border-radius:10px 10px 10px 10px;	
+		-ms-word-break: normal;
+		word-break: normal;
+		word-break: break-word;
+		border:1px solid #FFFFFF;		
+		/*background-color:#EAF7FF;/*EAF7FF DDECEF*/
+		width:500px;
+		height:165px;
+	}
+	.arrastable {
+		padding: 10px;
+		cursor: pointer;
+		width: 130px;
+		/*background-color:#9DBEDF;87AAAE */
+		color:black;
+		text-align:center;
+		border:1px solid #3577B8;
+		-moz-border-radius:5px 5px 5px 5px;
+		-webkit-border-radius:5px 5px 5px 5px;
+		-ms-border-radius:5px 5px 5px 5px;
+		border-radius:5px 5px 5px 5px;
+
+	}	
+	#contenedor p{
+		line-height:10px;
+	}
+</style>
+<script>
+$(function() {
+	
+	
+});
+</script>
+
+
+      <div id="contenedor">  
+      <table>
+      <tr><td colspan="2"><p><span id="respuesta-1" class="arrastable">10F2B<sub>16</sub></span></p></td></tr>
+      <tr><td colspan="2"><p><span id="respuesta-2" class="arrastable">100101</span> </p></td></tr>
+      <tr><td>El resultado de la suma 712A<sub>16</sub> + 9E01<sub>16</sub> es:</td><td><div id="caja-1" class="ui-widget-header"></div></td></tr>  	
+          	</table>
+            
+            
+        
+    </div>
+
+
+	
+
+
+
+</div>
+
+</div>
+
+<div class="navegacion"><button class="anterior">Anterior</button><button class="btnEjercicio3">Enviar</button></div>
+</div>
+
+
+<div class="contenido">
+<div class="ejercicio">
+<h3>Ejercicio</h3>
+
+
+<div class="bloque_figura">
+<div class="imagen"><img src="css/img/5.png" style="max-width:150px;"/></div><div class="texto_bloque">
+<table>
+<tr><td colspan="2"><h4 style="font-size:20px;">Resultados</h4></td></tr>
+<tr><td><img src="css/img/resultados.png" style="max-width:150px;"/></td><td><p id="calificacion"></p></td>
+</tr></table>
+</div>
+</div>
+
+<div class="navegacion"><button class="btnRevisar">Revisar el ejercicio</button><button class="btnLeccion">Volver a realizar la Lección</button><button class="btnSalir">Salir</button></div>
+</div>
+
+
+</div>
+
+<div class="contenido">
+<div class="referencias">
+<h3>Referencias</h3>
+<ul class="vineta"><li>Matejmo & iStock. (2017). <i>Números binarios Dataset bajo ángulo</i>. Recuperada de <a href="https://www.istockphoto.com/mx/foto/n%C3%BAmeros-binarios-dataset-bajo-%C3%A1ngulo-gm805184148-130622369" target="_blank">https://www.istockphoto.com/mx/foto/n%C3%BAmeros-binarios-dataset-bajo-%C3%A1ngulo-gm805184148-130622369</a> (imagen publicada bajo licencia estándar de acuerdo con <a href="https://www.istockphoto.com/es/legal/license-agreement" target="_blank">https://www.istockphoto.com/es/legal/license-agreement</a>).</li>
+
+<li>Icon made by <a href="https://www.freepik.com" target="_blank">Freepik</a> from <a href="https://www.flaticon.com" target="_blank">flaticon</a></li>
+
+<li>Icon made by <a href="https://www.flaticon.com/authors/prettycons" target="_blank">prettycons</a> from <a href="https://www.flaticon.com" target="_blank">flaticon</a></li> 
+
+</li></ul>
+ 
+
+
+</div>
+<div class="navegacion"><button class="btnInicio">Inicio</button></div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<div id="dialog" title="Claves y su Significado">
+
+</div>
+
+
+</body>
+</html>
